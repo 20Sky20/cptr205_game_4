@@ -91,13 +91,13 @@ window.addEventListener('DOMContentLoaded', DOMContentLoaded => {
         render.translate(-player_x * w/2, player_y * h/2);
         render.clearRect(player_x * w/2, -player_y * h/2, render.canvas.width, render.canvas.height);
 
-        render.fillStyle = '#0f0';
-        render.fillRect(-10000, render.canvas.height / 2, 10000 *render.canvas.width, render.canvas.height / 2);
+        render.fillStyle = '#00a';
+        render.fillRect(-10000, render.canvas.height / 2, 10000 *render.canvas.width, render.canvas.height * 2);
 
-        render.fillStyle = '#0ff';
-        render.fillRect(-10000, 0, 10000 * render.canvas.width, render.canvas.height / 2);
+        render.fillStyle = '#484';
+        render.fillRect(-10000, render.canvas.height / 20, 10000 * render.canvas.width, render.canvas.height);
 
-        render.fillStyle = '#00F';
+        render.fillStyle = '#643';
         platforms.forEach(platform => {
             render.fillRect(platform.x * w/2 + w/2, -platform.y * h/2 + h/2, platform.w * h/2, platform.h * h/2);
         })
@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', DOMContentLoaded => {
         //we see the increase in certain variables as others decrease which gives us our view that the ball
         //has a sort of friction beneath it. With the velocity being higher than the acceleration this helps
         //to allow the ball to not continue to accelerate like it did before as well as us setting it to 0.
-        render.fillStyle = '#f00';
+        render.fillStyle = '#a3e';
         render.beginPath();
         render.arc(player_x * w/2 + w/2, -player_y * h/2 + h/2 - player_r * h/2, player_r * h/2, 0, 2 * Math.PI);
         render.fill();
